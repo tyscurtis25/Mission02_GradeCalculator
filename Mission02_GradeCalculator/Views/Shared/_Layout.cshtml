@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+
+    <div class="container col-7">
+        <nav class="navbar">
+            <a asp-controller="GCalc" asp-action="Index" class="nav-link">Home</a>
+            <a asp-controller="GCalc" asp-action="CalcForm" class="nav-link">GPA Calculator</a>
+        </nav>
+        @RenderBody()
+    </div>
+
+    <footer class="modal-footer">Footer1@Footers.org</footer>
+
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="~/js/GradeCalc.js"></script>
+
+</body>
+
+</html>

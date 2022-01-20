@@ -9,16 +9,23 @@
     var exams;
     var intex;
     var finalGrade;
+    var grade_assignments;
+    var grade_group_projects;
+    var grade_quizzes;
+    var grade_exams;
+    var grade_intex;
     assignments = parseInt($("#assignments").val());
     group_project = parseInt($("#group_projects").val());
     quizzes = parseInt($("#quizzes").val());
     exams = parseInt($("#exams").val());
     intex = parseInt($("#intex").val());
-    finalGrade = (assignments * .55) +
-        (group_project * .05) +
-        (quizzes * .1) +
-        (exams * .2) +
-        (intex * .1);
+    grade_assignments = (assignments * .55);
+    grade_group_projects = (group_project * .05);
+    grade_quizzes = (quizzes * .1);
+    grade_exams = (exams * .2);
+    grade_intex = (intex * .1);
+    finalGrade = grade_assignments + grade_quizzes + grade_exams + grade_group_projects + grade_intex;
+        
 
     if (finalGrade >= 94) {
         letterGrade = "A";
